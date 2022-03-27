@@ -1,0 +1,55 @@
+2022-03-15 08:48:23.865 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-15 08:48:24.051 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-15 08:48:24.054 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:48:24.055 +03:30 [INF] Hosting environment: Development
+2022-03-15 08:48:24.057 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-15 08:48:37.981 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-15 08:48:38.576 +03:30 [INF] Request finished in 858.0475ms 404 
+2022-03-15 08:49:26.636 +03:30 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Product multipart/form-data; boundary=--------------------------815116292366262118138775 625
+2022-03-15 08:49:26.650 +03:30 [INF] Executing endpoint 'Shop.Controllers.ProductController.RegisterAsync (Shop)'
+2022-03-15 08:49:26.781 +03:30 [INF] Route matched with {action = "Register", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterAsync(Reddington.Services.DTOs.ProductDTO) on controller Shop.Controllers.ProductController (Shop).
+2022-03-15 08:49:31.143 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-15 08:49:32.497 +03:30 [INF] Executing DbCommand [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([Deleted], [Price], [ProductName], [PublishDate], [Sku], [StockQuantity], [UpdateOn])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [ID], [CreateOn], [Timestamp]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ID] = scope_identity();
+2022-03-15 08:49:32.873 +03:30 [INF] Executing ObjectResult, writing value of type 'Reddington.Services.DTOs.ProductDTO'.
+2022-03-15 08:49:32.989 +03:30 [INF] Executed action Shop.Controllers.ProductController.RegisterAsync (Shop) in 6197.0979ms
+2022-03-15 08:49:32.993 +03:30 [INF] Executed endpoint 'Shop.Controllers.ProductController.RegisterAsync (Shop)'
+2022-03-15 08:49:33.007 +03:30 [INF] Request finished in 6371.7132ms 201 application/json; charset=utf-8
+2022-03-15 08:51:33.999 +03:30 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Product/RegisterPictureForProduct multipart/form-data; boundary=--------------------------305209600944635287650828 274
+2022-03-15 08:51:34.003 +03:30 [INF] Executing endpoint 'Shop.Controllers.ProductController.RegisterPictureToProductAsync (Shop)'
+2022-03-15 08:51:34.016 +03:30 [INF] Route matched with {action = "RegisterPictureToProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegisterPictureToProductAsync(Reddington.Services.DTOs.ProductPictureDTO) on controller Shop.Controllers.ProductController (Shop).
+2022-03-15 08:51:36.314 +03:30 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CreateOn], [p].[Deleted], [p].[Price], [p].[ProductName], [p].[PublishDate], [p].[Sku], [p].[StockQuantity], [p].[Timestamp], [p].[UpdateOn]
+FROM [Product] AS [p]
+WHERE ([p].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2022-03-15 08:51:36.358 +03:30 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CreateOn], [p].[MimeType], [p].[UpdateOn], [p].[VirtualPath]
+FROM [Picture] AS [p]
+WHERE ([p].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2022-03-15 08:51:36.404 +03:30 [INF] Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ProductPicture] ([PictureID], [ProductID], [DisplayOrder])
+VALUES (@p0, @p1, @p2);
+2022-03-15 08:51:36.421 +03:30 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-03-15 08:51:36.423 +03:30 [INF] Executed action Shop.Controllers.ProductController.RegisterPictureToProductAsync (Shop) in 2392.6525ms
+2022-03-15 08:51:36.427 +03:30 [INF] Executed endpoint 'Shop.Controllers.ProductController.RegisterPictureToProductAsync (Shop)'
+2022-03-15 08:51:36.431 +03:30 [INF] Request finished in 2431.6439ms 200 
+2022-03-15 08:53:17.097 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-15 08:53:17.177 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-15 08:53:17.179 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-15 08:53:17.180 +03:30 [INF] Hosting environment: Development
+2022-03-15 08:53:17.181 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-15 08:53:19.118 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-15 08:53:19.287 +03:30 [INF] Request finished in 175.6965ms 404 
+2022-03-15 08:53:19.475 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-15 08:53:19.489 +03:30 [INF] Request finished in 14.1562ms 0 
+2022-03-15 08:53:22.996 +03:30 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Product/SearchPictureofProduct multipart/form-data; boundary=--------------------------173451266846052520928223 165
+2022-03-15 08:53:23.013 +03:30 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2022-03-15 08:53:23.015 +03:30 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2022-03-15 08:53:23.037 +03:30 [INF] Request finished in 42.0893ms 405 
+2022-03-15 08:53:30.226 +03:30 [INF] Application is shutting down...

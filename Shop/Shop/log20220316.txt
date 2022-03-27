@@ -1,0 +1,431 @@
+2022-03-16 14:04:04.295 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-16 14:04:04.469 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-16 14:04:04.471 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-16 14:04:04.476 +03:30 [INF] Hosting environment: Development
+2022-03-16 14:04:04.484 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-16 14:04:07.992 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-16 14:04:08.490 +03:30 [INF] Request finished in 496.6435ms 404 
+2022-03-16 14:04:08.630 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-16 14:04:08.633 +03:30 [INF] Request finished in 3.7735ms 0 
+2022-03-16 14:04:28.931 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Category  
+2022-03-16 14:04:28.952 +03:30 [INF] Executing endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 14:04:29.129 +03:30 [INF] Route matched with {action = "GetList", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetListAsync() on controller Shop.Controllers.CategoryController (Shop).
+2022-03-16 14:04:43.959 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 14:04:45.767 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ID], [c0].[Name], [c0].[ParentID], [c1].[Name], (
+    SELECT COUNT(*)
+    FROM [Category] AS [c]
+    WHERE [c0].[ID] = [c].[ParentID]), [c0].[CreateOn], [c0].[UpdateOn]
+FROM [Category] AS [c0]
+INNER JOIN [Category] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+2022-03-16 14:04:53.535 +03:30 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2022-03-16 14:04:53.587 +03:30 [INF] Executed action Shop.Controllers.CategoryController.GetListAsync (Shop) in 24445.09ms
+2022-03-16 14:04:53.597 +03:30 [INF] Executed endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 14:04:56.492 +03:30 [INF] Request finished in 27560.4178ms 200 text/plain; charset=utf-8
+2022-03-16 14:05:11.391 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Category  
+2022-03-16 14:05:11.396 +03:30 [INF] Executing endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 14:05:11.401 +03:30 [INF] Route matched with {action = "GetList", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetListAsync() on controller Shop.Controllers.CategoryController (Shop).
+2022-03-16 14:05:23.160 +03:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Reddington.Services.DTOs.CategoryListItemDTO, Reddington.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-16 14:05:27.372 +03:30 [INF] Executed action Shop.Controllers.CategoryController.GetListAsync (Shop) in 15959.0101ms
+2022-03-16 14:05:27.378 +03:30 [INF] Executed endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 14:05:27.387 +03:30 [INF] Request finished in 15996.8396ms 200 application/json; charset=utf-8
+2022-03-16 14:05:39.193 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Category  
+2022-03-16 14:05:39.200 +03:30 [INF] Executing endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 14:05:39.204 +03:30 [INF] Route matched with {action = "GetList", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetListAsync() on controller Shop.Controllers.CategoryController (Shop).
+2022-03-16 19:10:10.283 +03:30 [INF] Start installing Hangfire SQL objects...
+2022-03-16 19:10:12.180 +03:30 [INF] Hangfire SQL objects installed.
+2022-03-16 19:10:12.315 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:10:12.317 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:10:12.318 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-03-16 19:10:12.462 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:10:12.469 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:10:12.469 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:01
+2022-03-16 19:10:13.079 +03:30 [INF] Server vahidbabaey:22240:b195fa5a successfully announced in 594.3992 ms
+2022-03-16 19:10:13.079 +03:30 [INF] Server vahidbabaey:22240:eeb88235 successfully announced in 712.2523 ms
+2022-03-16 19:10:13.082 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-16 19:10:13.107 +03:30 [INF] Server vahidbabaey:22240:eeb88235 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:10:13.127 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-16 19:10:15.142 +03:30 [INF] Server vahidbabaey:22240:eeb88235 all the dispatchers started
+2022-03-16 19:10:15.207 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-16 19:10:15.487 +03:30 [INF] Hosting environment: Development
+2022-03-16 19:10:13.102 +03:30 [INF] Server vahidbabaey:22240:b195fa5a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:10:15.491 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-16 19:10:18.674 +03:30 [INF] Server vahidbabaey:22240:b195fa5a all the dispatchers started
+2022-03-16 19:10:19.605 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-16 19:10:21.812 +03:30 [INF] Request finished in 2154.0325ms 404 
+2022-03-16 19:10:22.224 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-16 19:10:22.228 +03:30 [INF] Request finished in 3.7211ms 0 
+2022-03-16 19:34:27.846 +03:30 [INF] Start installing Hangfire SQL objects...
+2022-03-16 19:34:28.542 +03:30 [INF] Hangfire SQL objects installed.
+2022-03-16 19:34:28.591 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:34:28.596 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:34:28.597 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-03-16 19:34:28.686 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:34:28.694 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:34:28.698 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:01
+2022-03-16 19:34:29.162 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-16 19:34:29.167 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-16 19:34:29.175 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-16 19:34:29.182 +03:30 [INF] Hosting environment: Development
+2022-03-16 19:34:29.197 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-16 19:34:29.201 +03:30 [INF] Server vahidbabaey:17908:1bb475bc successfully announced in 487.9755 ms
+2022-03-16 19:34:29.201 +03:30 [INF] Server vahidbabaey:17908:e777795e successfully announced in 557.7287 ms
+2022-03-16 19:34:29.226 +03:30 [INF] Server vahidbabaey:17908:1bb475bc is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:34:29.227 +03:30 [INF] Server vahidbabaey:17908:e777795e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:34:29.270 +03:30 [INF] 2 servers were removed due to timeout
+2022-03-16 19:34:30.393 +03:30 [INF] Server vahidbabaey:17908:1bb475bc all the dispatchers started
+2022-03-16 19:34:30.598 +03:30 [INF] Server vahidbabaey:17908:e777795e all the dispatchers started
+2022-03-16 19:34:31.535 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-16 19:34:31.791 +03:30 [INF] Request finished in 260.7809ms 404 
+2022-03-16 19:34:32.271 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-16 19:34:32.280 +03:30 [INF] Request finished in 9.5195ms 0 
+2022-03-16 19:34:39.002 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Category  
+2022-03-16 19:34:39.018 +03:30 [INF] Executing endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 19:34:39.147 +03:30 [INF] Route matched with {action = "GetList", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetListAsync() on controller Shop.Controllers.CategoryController (Shop).
+2022-03-16 19:34:39.517 +03:30 [INF] Executed action Shop.Controllers.CategoryController.GetListAsync (Shop) in 356.0292ms
+2022-03-16 19:34:39.532 +03:30 [INF] Executed endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 19:34:39.785 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Reddington.Services.Catalog.StockQuantityTask' while attempting to activate 'Shop.Controllers.CategoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Reddington.Service.Infrastructure.MapsterConfigMiddleWare.InvokeAsync(HttpContext context) in E:\projects\APIWebza\APIWeb\Shop\Reddington.Services\Infrastructure\MapsterConfigMiddleWare.cs:line 29
+   at Microsoft.AspNetCore.Builder.Extensions.MapMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-16 19:34:40.145 +03:30 [INF] Request finished in 1143.6054ms 500 text/plain
+2022-03-16 19:35:57.786 +03:30 [INF] Start installing Hangfire SQL objects...
+2022-03-16 19:35:58.597 +03:30 [INF] Hangfire SQL objects installed.
+2022-03-16 19:35:58.644 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:35:58.646 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:35:58.648 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-03-16 19:35:58.742 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 19:35:58.743 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 19:35:58.752 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:01
+2022-03-16 19:35:59.161 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-16 19:35:59.167 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-16 19:35:59.170 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-16 19:35:59.173 +03:30 [INF] Hosting environment: Development
+2022-03-16 19:35:59.211 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-16 19:35:59.242 +03:30 [INF] Server vahidbabaey:22220:62bbc522 successfully announced in 466.6392 ms
+2022-03-16 19:35:59.242 +03:30 [INF] Server vahidbabaey:22220:f4c5721a successfully announced in 524.815 ms
+2022-03-16 19:35:59.254 +03:30 [INF] Server vahidbabaey:22220:f4c5721a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:35:59.268 +03:30 [INF] Server vahidbabaey:22220:62bbc522 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 19:36:01.663 +03:30 [INF] Server vahidbabaey:22220:62bbc522 all the dispatchers started
+2022-03-16 19:36:01.927 +03:30 [INF] Server vahidbabaey:22220:f4c5721a all the dispatchers started
+2022-03-16 19:36:03.590 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-16 19:36:03.725 +03:30 [INF] Request finished in 136.7872ms 404 
+2022-03-16 19:36:03.839 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-16 19:36:03.843 +03:30 [INF] Request finished in 3.9222ms 0 
+2022-03-16 19:36:06.132 +03:30 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Category  
+2022-03-16 19:36:06.147 +03:30 [INF] Executing endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 19:36:06.210 +03:30 [INF] Route matched with {action = "GetList", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetListAsync() on controller Shop.Controllers.CategoryController (Shop).
+2022-03-16 19:36:06.608 +03:30 [INF] Executing action method Shop.Controllers.CategoryController.GetListAsync (Shop) - Validation state: "Valid"
+2022-03-16 19:36:14.302 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 19:36:14.302 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 19:36:16.564 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 19:36:17.920 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c0].[ID], [c0].[Name], [c0].[ParentID], [c1].[Name], (
+    SELECT COUNT(*)
+    FROM [Category] AS [c]
+    WHERE [c0].[ID] = [c].[ParentID]), [c0].[CreateOn], [c0].[UpdateOn]
+FROM [Category] AS [c0]
+INNER JOIN [Category] AS [c1] ON [c0].[ParentID] = [c1].[ID]
+2022-03-16 19:36:17.926 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 19:36:17.926 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 19:36:19.087 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 19:36:19.101 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 19:36:19.125 +03:30 [INF] Executed action method Shop.Controllers.CategoryController.GetListAsync (Shop), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12492.2092ms.
+2022-03-16 19:36:19.749 +03:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Reddington.Services.DTOs.CategoryListItemDTO, Reddington.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-03-16 19:36:20.457 +03:30 [INF] Executed action Shop.Controllers.CategoryController.GetListAsync (Shop) in 14225.9227ms
+2022-03-16 19:36:20.481 +03:30 [INF] Executed endpoint 'Shop.Controllers.CategoryController.GetListAsync (Shop)'
+2022-03-16 19:36:20.511 +03:30 [INF] Request finished in 14380.3467ms 200 application/json; charset=utf-8
+2022-03-16 19:36:21.955 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 19:36:22.145 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 19:36:25.920 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 19:36:26.039 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 19:36:28.180 +03:30 [INF] Server vahidbabaey:22220:62bbc522 caught stopping signal...
+2022-03-16 19:36:28.188 +03:30 [INF] Application is shutting down...
+2022-03-16 19:36:28.189 +03:30 [INF] Server vahidbabaey:22220:62bbc522 caught stopped signal...
+2022-03-16 19:36:28.276 +03:30 [INF] Server vahidbabaey:22220:f4c5721a caught stopping signal...
+2022-03-16 19:36:28.279 +03:30 [INF] Server vahidbabaey:22220:f4c5721a caught stopped signal...
+2022-03-16 19:36:29.265 +03:30 [INF] Server vahidbabaey:22220:f4c5721a All dispatchers stopped
+2022-03-16 19:36:29.299 +03:30 [INF] Server vahidbabaey:22220:f4c5721a successfully reported itself as stopped in 19.6924 ms
+2022-03-16 19:36:29.317 +03:30 [INF] Server vahidbabaey:22220:f4c5721a has been stopped in total 1038.9381 ms
+2022-03-16 19:36:29.653 +03:30 [INF] Server vahidbabaey:22220:62bbc522 All dispatchers stopped
+2022-03-16 19:36:29.683 +03:30 [INF] Server vahidbabaey:22220:62bbc522 successfully reported itself as stopped in 25.4167 ms
+2022-03-16 19:36:29.686 +03:30 [INF] Server vahidbabaey:22220:62bbc522 has been stopped in total 1498.9285 ms
+2022-03-16 22:28:27.100 +03:30 [INF] Start installing Hangfire SQL objects...
+2022-03-16 22:28:27.983 +03:30 [INF] Hangfire SQL objects installed.
+2022-03-16 22:28:28.053 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 22:28:28.059 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 22:28:28.064 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2022-03-16 22:28:28.175 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@HangfireRED'
+2022-03-16 22:28:28.180 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2022-03-16 22:28:28.181 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:01
+2022-03-16 22:28:28.578 +03:30 [INF] Server vahidbabaey:20204:2ae0f761 successfully announced in 373.492 ms
+2022-03-16 22:28:28.583 +03:30 [INF] Server vahidbabaey:20204:27eb071e successfully announced in 465.6315 ms
+2022-03-16 22:28:28.613 +03:30 [INF] Server vahidbabaey:20204:27eb071e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 22:28:28.613 +03:30 [INF] Server vahidbabaey:20204:2ae0f761 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2022-03-16 22:28:28.673 +03:30 [INF] 2 servers were removed due to timeout
+2022-03-16 22:28:29.344 +03:30 [INF] Server vahidbabaey:20204:27eb071e all the dispatchers started
+2022-03-16 22:28:29.417 +03:30 [INF] Server vahidbabaey:20204:2ae0f761 all the dispatchers started
+2022-03-16 22:28:30.084 +03:30 [INF] Now listening on: https://localhost:5001
+2022-03-16 22:28:30.109 +03:30 [INF] Now listening on: http://localhost:5000
+2022-03-16 22:28:30.145 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-16 22:28:30.153 +03:30 [INF] Hosting environment: Development
+2022-03-16 22:28:30.154 +03:30 [INF] Content root path: E:\projects\APIWebza\APIWeb\Shop\Shop
+2022-03-16 22:28:33.053 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 22:28:33.053 +03:30 [INF] Entity Framework Core 3.0.2 initialized 'SqlServerApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MaxPoolSize=16 using lazy-loading proxies 
+2022-03-16 22:28:33.713 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2022-03-16 22:28:34.314 +03:30 [INF] Request finished in 603.9629ms 404 
+2022-03-16 22:28:34.410 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2022-03-16 22:28:34.722 +03:30 [INF] Request finished in 312.28ms 0 
+2022-03-16 22:28:34.936 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:34.936 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:35.414 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:35.414 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:35.797 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:35.915 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:40.847 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:40.941 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:45.862 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:45.928 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:47.053 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/hangfire  
+2022-03-16 22:28:47.492 +03:30 [INF] Request finished in 439.9222ms 200 text/html
+2022-03-16 22:28:47.568 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/hangfire/css1780  
+2022-03-16 22:28:47.572 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/hangfire/js1780  
+2022-03-16 22:28:47.633 +03:30 [INF] Request finished in 65.4514ms 200 text/css
+2022-03-16 22:28:47.634 +03:30 [INF] Request finished in 62.1427ms 200 application/javascript
+2022-03-16 22:28:47.660 +03:30 [INF] Request starting HTTP/2 GET https://localhost:5001/hangfire/fonts/glyphicons-halflings-regular/woff2  
+2022-03-16 22:28:47.668 +03:30 [INF] Request finished in 7.8698ms 200 font/woff2
+2022-03-16 22:28:49.795 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:28:49.849 +03:30 [INF] Request finished in 54.7603ms 200 application/json
+2022-03-16 22:28:50.915 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:51.015 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:51.868 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:28:51.886 +03:30 [INF] Request finished in 19.1146ms 200 application/json
+2022-03-16 22:28:53.909 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:28:53.931 +03:30 [INF] Request finished in 21.7352ms 200 application/json
+2022-03-16 22:28:55.905 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:28:56.016 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:28:56.018 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:28:56.035 +03:30 [INF] Request finished in 17.6173ms 200 application/json
+2022-03-16 22:28:58.058 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:28:58.070 +03:30 [INF] Request finished in 12.9839ms 200 application/json
+2022-03-16 22:29:00.093 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:00.112 +03:30 [INF] Request finished in 18.372ms 200 application/json
+2022-03-16 22:29:00.973 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:29:01.072 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:29:02.128 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:02.138 +03:30 [INF] Request finished in 10.5073ms 200 application/json
+2022-03-16 22:29:04.154 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:04.161 +03:30 [INF] Request finished in 7.0493ms 200 application/json
+2022-03-16 22:29:06.001 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:29:06.106 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:29:06.185 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:06.205 +03:30 [INF] Request finished in 19.6694ms 200 application/json
+2022-03-16 22:29:08.231 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:08.243 +03:30 [INF] Request finished in 12.9069ms 200 application/json
+2022-03-16 22:29:10.261 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:10.272 +03:30 [INF] Request finished in 10.914ms 200 application/json
+2022-03-16 22:29:11.013 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:29:11.110 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:29:12.299 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:12.306 +03:30 [INF] Request finished in 7.7451ms 200 application/json
+2022-03-16 22:29:14.320 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:14.340 +03:30 [INF] Request finished in 19.1825ms 200 application/json
+2022-03-16 22:29:15.064 +03:30 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[CreateOn], [p].[UpdateOn], [p].[PublishDate], [p].[ID], [p].[ProductName], [p].[Price], [p].[Sku], [p].[StockQuantity], [t].[Name], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+FROM [Product] AS [p]
+LEFT JOIN (
+    SELECT [c].[Name], [p0].[CategoryID], [p0].[ProductID], [c].[ID]
+    FROM [ProductCategory] AS [p0]
+    INNER JOIN [Category] AS [c] ON [p0].[CategoryID] = [c].[ID]
+) AS [t] ON [p].[ID] = [t].[ProductID]
+LEFT JOIN [ProductCategory] AS [p1] ON [p].[ID] = [p1].[ProductID]
+WHERE ([p].[Deleted] <> CAST(1 AS bit)) AND ([p].[StockQuantity] <= 0)
+ORDER BY [p].[ID], [t].[CategoryID], [t].[ProductID], [t].[ID], [p1].[CategoryID], [p1].[ProductID]
+2022-03-16 22:29:15.154 +03:30 [INF]  The Product Blacklist Is Low Stock Quantity
+2022-03-16 22:29:16.361 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:16.371 +03:30 [INF] Request finished in 10.3008ms 200 application/json
+2022-03-16 22:29:18.406 +03:30 [INF] Request starting HTTP/2 POST https://localhost:5001/hangfire/stats application/x-www-form-urlencoded; charset=UTF-8 228
+2022-03-16 22:29:18.415 +03:30 [INF] Request finished in 8.4898ms 200 application/json

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Shop</name>
+    </assembly>
+    <members>
+        <member name="M:Shop.Controllers.CategoryController.GetListAsync">
+            <summary>
+            این تایع یک  دسته جدید را ثبت می کند
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
